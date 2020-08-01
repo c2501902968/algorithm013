@@ -1,0 +1,66 @@
+queue 特点：
+在java中，queue相当于提供了一个接口。实现方式有很多。
+诸如：
+https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html
+ PriorityQueue， ArrayDeque等。。。。
+ 在queue中提供了一些额外的操作用于插入，提取，和检查。对于每种方法都存在两种形式：一种是失败抛出异常，一种是失败返回一个特殊的值。
+            抛异常      返回特殊值
+ 插入 ： add(e)       offer(e)   -- 在FIFO队列中， 新的元素被插入到队列的尾
+ 提取 ： remove()    poll(e)     -- 删除并返回队列头， 注意队列为空（抛异常，或返回 null）
+ 检查 ： element()   peek()     -- 返回队列的头，但不移除
+
+注意：
+队列不一定都是 FIFO的顺序，比如priority Queue；
+但是无论是哪种顺序，队列头部的元素都是通过调用remove() 或者 poll() 移除。
+
+boolean add(E e):
+来源：Collection<E> 的add
+参数： e ：要添加的元素
+返回值： 
+        成功：True
+        失败： 异常
+异常： 
+IllegalStateException-如果由于容量限制此时无法添加元素
+ClassCastException-如果指定元素的类阻止将其添加到此队列中
+NullPointerException-如果指定的元素为null，并且此队列不允许使用null元素
+IllegalArgumentException-如果此元素的某些属性阻止将其添加到此队列中
+
+boolean offer(E e)：
+参数： e ：要添加的元素
+返回值：
+            成功： True
+            失败： False
+异常：
+ClassCastException-如果指定元素的类阻止将其添加到此队列中
+NullPointerException-如果指定的元素为null，并且此队列不允许使用null元素
+IllegalArgumentException-如果此元素的某些属性阻止将其添加到此队列中
+
+如果可以在不违反容量限制的情况下立即将指定的元素插入此队列。 当使用容量受限的队列时，此方法通常比add（E）更可取，因为add（E）仅通过引发异常可能无法插入元素。
+
+E remove()：
+返回值：
+    成功：队列的头
+    失败：异常
+异常：
+    NoSuchElementException - 队列为空
+
+E poll()：
+返回值：
+    成功：队列头
+    失败：null
+注意： remove() 和  poll()  检索并移除队列头
+E element()：
+返回值：
+    成功：队列的头
+    失败：异常
+异常：
+    NoSuchElementException - 队列为空
+
+E peek()：
+返回值：
+    成功：队列头
+    失败：null
+注意： element() peek()  只检索，不移除队列头
+
+http://fuseyism.com/classpath/doc/java/util/Queue-source.html
+队列的源码至少定义了这几个接口

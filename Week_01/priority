@@ -1,0 +1,38 @@
+https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html
+http://fuseyism.com/classpath/doc/java/util/PriorityQueue-source.html
+根据上面的文档：PriorityQueue是一个类
+
+根据构造函数的差异，PriorityQueue元素的顺序可能为自然顺序，或者由队列提供的Comparator
+PriorityQueue 不允许 null 元素
+PriorityQueue 如果是自然顺序的话，不允许插入不可比较的数。
+对于指定的顺序而言，队列的头是最小的元素。但是多个元素都是最小值的时候，头部只是其中一个元素。
+PriorityQueue 无届，但是，但是具有内部容量来控制用于在队列上存储元素的数组的大小。它总是至少与队列大小一样大。将元素添加到优先级队列时，其容量会自动增长。
+
+
+1 class 就会有构造函数，如下：
+PriorityQueue()
+# 元素在特定的collection
+PriorityQueue(Collection<? extends E> c)
+#元素的顺序根据comparator
+PriorityQueue(Comparator<? super E> comparator)
+#定义一个指定容量，
+PriorityQueue(int cap)
+# 定义一个指定容量，元素的顺序根据comparator
+PriorityQueue(int cap, Comparator<? super E> comparator)
+# 元素在PriorityQueue里
+PriorityQueue(PriorityQueue<? extends E> c)
+# 元素在指定排序的集合
+PriorityQueue(SortedSet<? extends E> c)
+
+2 因为他实现了queue的接口，所以它有对queue提供的接口的实现。
+add，offer，poll，remove, peek，element
+除此之外，还添加了
+clear() 删除所有元素 
+contains(obj o)  判断队列中是否包含指定元素
+size() 返回集合中元素的大小
+interator() : 返回元素中进行迭代的迭代器，迭代器不会以任何顺序返回。
+remove(int index)：如果元素存在的话，从队列中移除索引为index的元素
+remove(obj o)：如果元素存在的话，从队列中移除指定元素o的单个实例。
+入队，出对操作（offer，poll，remove, add) 时间复杂度： O(logn)
+remove(obj) 和contains(obj) 时间复杂度：O(n)
+检索操作（peek，element，size） 时间复杂度：O(1)
