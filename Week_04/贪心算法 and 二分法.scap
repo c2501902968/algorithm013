@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="04A356F7-CEFB-471A-B1A4-6B1B7542E927">
+    <Notes>
+        <Note ID="0" FontSize="16.0" Position="46.0,123.0" Width="99.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Fill>0.01432 0.162506 0.22848</Fill>
+            </Appearance>
+            <String>贪心算法：</String>
+            <ConnectedNoteIDs>1-2, 4-5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="1" FontSize="12.0" Position="222.116943,62.770996" Width="324.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Cloud">0.731856 0.242921 0.978714</Border>
+            </Appearance>
+            <String>一种在每一步选择中都采取当前状态下最好或最优（即最有利）的选择，从而导致结果是全局最好或最优的算法</String>
+            <ConnectedNoteIDs>0</ConnectedNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="220.636841,130.505859" Width="452.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>PK：
+贪心算法对每个子问题的解决办法都做出选择，不能回退
+动态规划则会保存以前的运算结果，并根据以前的结果对当前进行选择，有回退功能</String>
+            <ConnectedNoteIDs>0, 3</ConnectedNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="732.6427,134.707031" Width="140.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>贪心：当下局部最优判断
+回溯：能够回退
+动态规划：最优 + 回退</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="195.150024,224.115845" Width="461.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.561855 0.71062 0.779401</Border>
+                <Fill>0.702319 0.888276 0.974252</Fill>
+            </Appearance>
+            <String>适用场景：
+       问题能分解为子问题来解决，子问题的最优解能递推到最终问题的最优解，这样子问题最优解称为最优解子结构
+
+解决优化问题：求图中的最小生成树，求哈夫曼
+对于工程和生活中的问题，一般不能得到想要求的答案</String>
+            <ConnectedNoteIDs>0</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="91.633545,374.542236" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>一旦一个问题可以用贪心法求解，一般是解决这个问题的最好办法
+贪心法可以作为辅助算法 或 直接解决一些要求结果不是特别精确的问题</String>
+            <ConnectedNoteIDs>0</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="16.0" Position="68.331177,509.0" Width="56.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Fill>0.01432 0.162506 0.22848</Fill>
+            </Appearance>
+            <String>二分法</String>
+            <ConnectedNoteIDs>7, 9-10</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,3</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="258.540161,553.47937" Width="193.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Fill>0.902657 0.902657 0.902657</Fill>
+            </Appearance>
+            <String>模版：
+left, right = 0, len(array) - 1 
+while left &lt;= right: 
+	  mid = (left + right) / 2 
+	  if array[mid] == target: 
+		    # find the target!! 
+		    break or return result 
+	  elif array[mid] &lt; target: 
+		    left = mid + 1 
+	  else: 
+		    right = mid - 1
+</String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="231.81189,499.0" Width="72.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.572684 0.758969 0.558154</Border>
+                <Fill>0.715855 0.948712 0.697692</Fill>
+            </Appearance>
+            <String>适用场景：
+有序 有边界</String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="223.444458,825.8573" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>0.0 0.0 0.914985</TextColor>
+            </Appearance>
+            <String>特别好用的二分查找法模板（第 2 版）：https://www.liwei.party/2019/06/17/leetcode-solution-new/search-insert-position/</String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,14</FormatRange>
+                <FormatRange Bold="Yes">14,3</FormatRange>
+                <FormatRange Bold="Yes">17,3</FormatRange>
+                <FormatRange Underline="Yes" Link="https://www.liwei.party/2019/06/17/leetcode-solution-new/search-insert-position/">20,80</FormatRange>
+            </Formatting>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>2-3, 6-7, 9</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="98D9DD36-F4DE-4D9B-9A73-31BDDCD96E7B" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="CB5C85C7-19DE-4578-94E5-81A4CF69DC00" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="72D59BD3-D730-418B-BEBF-1E1D17B0DCEF" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="4D4C55A7-65EC-4193-ADAB-76879FBF921D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="8CF71354-C87C-48C8-BA22-DFA5930E693E" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="89ADFE7B-9976-41C7-8F8F-C0CEF18BE620" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="98BFD085-DC45-4BA4-A03D-65A711A4DA0E" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+    </UISettings>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
